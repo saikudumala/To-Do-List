@@ -1,22 +1,29 @@
 import React, { Component, props } from "react";
 import NavBarComponent from "../NavBar/NavBarComponent";
-import FormComponent from "../FormComponent/FormComponent"
+
 class MainComponent extends React.Component {
   constructor() {
     super(props);
-    //defining the state in the constructor
+
     this.state = {
       reptile: "alligator",
       color: "#008f68",
-      isFormVisible:false,
+      isFormVisible: false
     };
-    // console.log(this.props);
   }
 
+  /**
+   *
+   * LifeCycle method invoked when component is loaded
+   *
+   * */
+  componentDidMount() {
+    console.log("Loaded Main Component");
+  }
   render() {
     return (
       <div>
-        <NavBarComponent></NavBarComponent>
+        <NavBarComponent />
       </div>
     );
   }

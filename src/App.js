@@ -17,7 +17,7 @@ class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello, {this.state.reptile}</h1>
+       
         <MainComponent></MainComponent>;
       </div>
     );

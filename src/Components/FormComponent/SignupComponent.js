@@ -1,11 +1,6 @@
 import React, { Component, props } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import FormComponent from "../FormComponent/FormComponent"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import FormComponent from "../FormComponent/FormComponent";
 class SignupComponent extends React.Component {
   constructor() {
     super(props);
@@ -16,16 +11,11 @@ class SignupComponent extends React.Component {
 
   render() {
     return (
-      <div> 
-      <Router>
-      <Link to="/signup">Signup</Link>
-        <Switch>
-          <Route path="/signup">
-            <FormComponent />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+      <div>
+        <Link to="/SignUp">
+          <button class="SignUpComponentclass">SignUp</button>
+        </Link>
+      </div>
     );
   }
 }
