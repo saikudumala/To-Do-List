@@ -1,6 +1,7 @@
 import React, {  props } from "react";
 import LoginComponent from "../FormComponent/LoginComponent";
 import SignupComponent from "../FormComponent/SignupComponent";
+import FormComponent from "../FormComponent/FormComponent";
 import Navbar from "../NavBar/Navbar";
 import {
   BrowserRouter as Router,
@@ -32,8 +33,8 @@ class NavBarComponent extends React.Component {
         <Router>
           <Navbar />
           <Switch>
-            <Route path="/Login" component={LoginComponent} />
-            <Route path="/SignUp" component={SignupComponent} />
+            <Route path="/Login" component={FormComponent} />
+                    <Route path="/SignUp" component={FormComponent} />
           </Switch>
         </Router>
       </div>
