@@ -1,4 +1,5 @@
 import React, { Component, props } from "react";
+import FormComponent from "../FormComponent/FormComponent";
 import NavBarComponent from "../NavBar/NavBarComponent";
 
 class MainComponent extends React.Component {
@@ -34,7 +35,8 @@ class MainComponent extends React.Component {
   render() {
     return (
       <div>
-        <NavBarComponent />
+            <NavBarComponent />
+            <FormComponent/>
       </div>
     );
   }

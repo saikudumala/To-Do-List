@@ -1,14 +1,9 @@
-import React, {  props } from "react";
+import React, { props } from "react";
 import LoginComponent from "../FormComponent/LoginComponent";
 import SignupComponent from "../FormComponent/SignupComponent";
 import FormComponent from "../FormComponent/FormComponent";
 import Navbar from "../NavBar/Navbar";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class NavBarComponent extends React.Component {
   constructor() {
@@ -33,8 +28,7 @@ class NavBarComponent extends React.Component {
         <Router>
           <Navbar />
           <Switch>
-            <Route path="/Login" component={FormComponent} />
-                    <Route path="/SignUp" component={FormComponent} />
+            <Route path="/SignUp" component={FormComponent} />
           </Switch>
         </Router>
       </div>
