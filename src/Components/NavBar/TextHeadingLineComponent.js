@@ -3,7 +3,8 @@ import React from "react";
 const headerLineStyle = {
   textalign: "center",
   color: "white",
-  height: "60px",
+  height: "100px",
+  'margin-top': "10px",
   position: "absolute",
   left: "45%"
 };

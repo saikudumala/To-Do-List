@@ -1,6 +1,7 @@
 import React, { Component, props } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import FormComponent from "../FormComponent/FormComponent";
+import "../../CSS/Authentication.css"
 class SignupComponent extends React.Component {
   constructor() {
     super(props);

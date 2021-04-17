@@ -13,14 +13,16 @@
 
 .SignUpComponentclass {
     border: none;
-    color: black;
+    color: green;
     font-size: 16px;
     height: 35px;
     width: 60px;
     cursor: pointer;
     border-radius: 8px;
     background-color: #C0C0C0;
-    margin-right: 5px;
+    right: 45px;
+    margin-top: 20px ;
+    position: absolute;
 }
 
 

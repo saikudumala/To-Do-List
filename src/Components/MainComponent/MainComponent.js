@@ -8,7 +8,9 @@ class MainComponent extends React.Component {
     this.state = {
       reptile: "alligator",
       color: "#008f68",
-      isFormVisible: false
+      isFormVisible: false,
+      windowHeight: null,
+      windowWidth: null,
     };
   }
 
@@ -18,7 +20,16 @@ class MainComponent extends React.Component {
    *
    * */
   componentDidMount() {
-    console.log("Loaded Main Component");
+    console.log(
+      "Loaded Main Component",
+      window.innerWidth,
+      "Height",
+      window.innerHeight
+    );
+    this.setState({
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth,
+    });
   }
   render() {
     return (

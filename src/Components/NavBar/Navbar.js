@@ -10,7 +10,7 @@ const spanStyles = {
     fontsize: "30px",
     textalign: "center",
     backgroundColor: "black",
-    height: "60px"
+    height: "80px"
 };
 const Navbar = () => {
 
@@ -29,7 +29,6 @@ const Navbar = () => {
   return (
     <div style={spanStyles}>
       <TextHeadingLineComponent/>
-      <LoginComponent />
       <SignupComponent />
     </div>
   );
