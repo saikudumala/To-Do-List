@@ -16,7 +16,7 @@ class FormComponent extends React.Component {
       <div
         style={{
           "border-radius": "5px",
-          "background-color": "#697795",
+          "background-color": "#4DA8DA",
           "margin-top": "100px",
           "text-align": "center",
           width: "500px",
