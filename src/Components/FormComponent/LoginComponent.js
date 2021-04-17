@@ -15,7 +15,9 @@ class LoginComponent extends React.Component {
    *
    * */
   componentDidMount() {
-    console.log("Loaded Login Component");
+   
+    var docx = document.cookie;
+    console.log("Loaded Login Component ****",document);
   }
   render() {
     console.log("Loginc ocmponent loading");
