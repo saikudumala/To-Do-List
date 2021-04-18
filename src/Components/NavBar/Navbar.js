@@ -29,7 +29,6 @@ const Navbar = () => {
   return (
       <div id="navBarComp" style={spanStyles}>
       <TextHeadingLineComponent/>
-      <SignupComponent />
     </div>
   );
 };

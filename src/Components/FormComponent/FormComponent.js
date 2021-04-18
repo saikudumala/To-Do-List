@@ -1,4 +1,7 @@
 import React, { Component, props } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SignupComponent from "../FormComponent/SignupComponent";
+
 class FormComponent extends React.Component {
   constructor() {
     super(props);
@@ -23,8 +26,7 @@ class FormComponent extends React.Component {
           "text-align": "center",
           width: "500px",
           padding: "20px",
-          "margin-left": "33%",
-          
+          "margin-left": "33%"
         }}
       >
         <form id="form_login">
@@ -79,6 +81,15 @@ class FormComponent extends React.Component {
               Login
             </button>
           </p>
+          <div>
+            <Router>
+              <Link to="/SignUp">
+                <p>Not a Registered user ? Please sign up here</p>
+              </Link>
+
+              <Route path="/SignUp" component={SignupComponent} />
+            </Router>
+          </div>
         </form>
       </div>
     );
