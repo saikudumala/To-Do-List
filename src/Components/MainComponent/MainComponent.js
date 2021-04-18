@@ -1,7 +1,7 @@
 import React, { Component, props } from "react";
 import FormComponent from "../FormComponent/FormComponent";
 import NavBarComponent from "../NavBar/NavBarComponent";
-
+import SideMenuComponent from "../SideMenu/SideMenuComponent";
 class MainComponent extends React.Component {
   constructor() {
     super(props);
@@ -36,6 +36,7 @@ class MainComponent extends React.Component {
     return (
       <div>
             <NavBarComponent />
+            <SideMenuComponent/>
             <FormComponent/>
       </div>
     );

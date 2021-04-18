@@ -1,5 +1,4 @@
 import React from "react";
-import LoginComponent from "../FormComponent/LoginComponent";
 import SignupComponent from "../FormComponent/SignupComponent";
 import TextHeadingLineComponent from "../NavBar/TextHeadingLineComponent";
 import styled from "styled-components";
@@ -9,8 +8,9 @@ const spanStyles = {
     flexwrap: "wrap",
     fontsize: "30px",
     textalign: "center",
-    backgroundColor: "black",
-    height: "80px"
+    backgroundColor: "#696969",
+    height: "80px",
+    'box-shadow': "15px 10px 8px 3px #808080",
 };
 const Navbar = () => {
 
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   
   return (
-    <div style={spanStyles}>
+      <div id="navBarComp" style={spanStyles}>
       <TextHeadingLineComponent/>
       <SignupComponent />
     </div>

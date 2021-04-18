@@ -10,14 +10,12 @@ class FormComponent extends React.Component {
    * Method to handle Login submission
    * @param {any} e
    */
-    submitDetails() {
-
-
-    }
+  submitDetails() {}
 
   render() {
     return (
       <div
+        id="formComp"
         style={{
           "border-radius": "5px",
           "background-color": "#4DA8DA",
@@ -25,7 +23,8 @@ class FormComponent extends React.Component {
           "text-align": "center",
           width: "500px",
           padding: "20px",
-          "margin-left": "33%"
+          "margin-left": "33%",
+          
         }}
       >
         <form id="form_login">
