@@ -2,14 +2,18 @@ import React, { Component, props } from "react";
 class FormComponent extends React.Component {
   constructor() {
     super(props);
-    this.state = {};
+    this.state = { userName: null, passWord: null };
+    this.submitDetails = this.submitDetails.bind(this);
   }
 
   /**
    * Method to handle Login submission
    * @param {any} e
    */
-  submitDetails(e) {}
+    submitDetails() {
+
+
+    }
 
   render() {
     return (
@@ -38,6 +42,7 @@ class FormComponent extends React.Component {
                 height: "30px",
                 width: "300px"
               }}
+              onChange={e => this.setState({ userName: e.target.value })}
             />
           </p>
           <p>
@@ -52,6 +57,7 @@ class FormComponent extends React.Component {
                 height: "30px",
                 width: "300px"
               }}
+              onChange={e => this.setState({ passWord: e.target.value })}
             />
           </p>
 
@@ -66,8 +72,10 @@ class FormComponent extends React.Component {
                 height: "30px",
                 width: "100px",
                 "background-color": "black",
-                color: "white"
+                color: "white",
+                cursor: "pointer"
               }}
+              onClick={this.submitDetails}
             >
               Login
             </button>
