@@ -22,7 +22,7 @@ class SignupComponent extends React.Component {
         id="signupformComp"
         style={{
           "border-radius": "5px",
-          "background-color": "#4DA8DA",
+          "background-color": "#FFE4C4",
           "margin-top": "100px",
           "text-align": "center",
           width: "500px",
@@ -36,7 +36,7 @@ class SignupComponent extends React.Component {
             <input
               type="text"
               id="username"
-              placeholder="Please Enter UserName"
+              placeholder="Please Create UserName"
               style={{
                 border: "1px solid #ccc",
                 "border-radius": "4px",
@@ -51,7 +51,7 @@ class SignupComponent extends React.Component {
             <b>Password:</b> &nbsp;<input
               type="password"
               id="password"
-              placeholder="Please Enter Password"
+              placeholder="Please Create Password"
               style={{
                 border: "1px solid #ccc",
                 "border-radius": "4px",
@@ -79,7 +79,7 @@ class SignupComponent extends React.Component {
               }}
               onClick={this.submitDetails}
             >
-              Login
+              SignUp
             </button>
           </p>
        {/* </form>*/}
