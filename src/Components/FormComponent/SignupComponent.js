@@ -5,21 +5,21 @@ import "../../CSS/Authentication.css";
 class SignupComponent extends React.Component {
   constructor() {
     super(props);
-    //defining the state in the constructor
-    this.state = {};
-    // console.log(this.props);
+
+      this.state = { userName: null, passWord:null};
+      this.submitDetails = this.submitDetails.bind(this);
   }
 
-  render() {
+    /**
+     * Method to handle Login submission
+     * @param {any} e
+     */
+    submitDetails() { }
+    render() {
+        console.log('signup form');
     return (
-      /*<div>
-        <Link to="/SignUp">
-          <button class="SignUpComponentclass">SignUp</button>
-        </Link>
-      </div>*/
-
       <div
-        id="formComp"
+        id="signupformComp"
         style={{
           "border-radius": "5px",
           "background-color": "#4DA8DA",
@@ -30,7 +30,7 @@ class SignupComponent extends React.Component {
           "margin-left": "33%"
         }}
       >
-        <form id="form_login">
+        {/*<form id="signup_form_login">*/}
           <p>
             <b>UserName:</b>&nbsp;
             <input
@@ -82,7 +82,7 @@ class SignupComponent extends React.Component {
               Login
             </button>
           </p>
-        </form>
+       {/* </form>*/}
       </div>
     );
   }

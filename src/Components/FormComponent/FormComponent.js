@@ -5,8 +5,13 @@ import SignupComponent from "../FormComponent/SignupComponent";
 class FormComponent extends React.Component {
   constructor() {
     super(props);
-    this.state = { userName: null, passWord: null };
+    this.state = {
+      userName: null,
+      passWord: null,
+      formComponentVisiblity: true
+    };
     this.submitDetails = this.submitDetails.bind(this);
+    this.signUpSubmisiion = this.signUpSubmisiion.bind(this);
   }
 
   /**
@@ -15,7 +20,13 @@ class FormComponent extends React.Component {
    */
   submitDetails() {}
 
+  signUpSubmisiion() {
+    this.setState({ formComponentVisiblity: false });
+  }
+
   render() {
+    console.log("FormComponentVisblity", this.state.formComponentVisiblity);
+
     return (
       <div
         id="formComp"
@@ -26,10 +37,11 @@ class FormComponent extends React.Component {
           "text-align": "center",
           width: "500px",
           padding: "20px",
-          "margin-left": "33%"
+          "margin-left": "33%",
+          display: this.state.formComponentVisiblity ? "block" : "None"
         }}
       >
-        <form id="form_login">
+       {/* <form id="form_login">*/}
           <p>
             <b>UserName:</b>&nbsp;
             <input
@@ -84,13 +96,16 @@ class FormComponent extends React.Component {
           <div>
             <Router>
               <Link to="/SignUp">
-                <p>Not a Registered user ? Please sign up here</p>
+                <p onClick={this.signUpSubmisiion}>
+                  {" "}
+                  Not a Registered user ? Please sign up here
+                </p>
               </Link>
 
               <Route path="/SignUp" component={SignupComponent} />
             </Router>
           </div>
-        </form>
+        {/*</form>*/}
       </div>
     );
   }

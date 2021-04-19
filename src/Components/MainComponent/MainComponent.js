@@ -12,6 +12,7 @@ class MainComponent extends React.Component {
       isFormVisible: false,
       windowHeight: null,
       windowWidth: null,
+      isFormComponentVisible: true
     };
   }
 
@@ -29,15 +30,15 @@ class MainComponent extends React.Component {
     );
     this.setState({
       windowHeight: window.innerHeight,
-      windowWidth: window.innerWidth,
+      windowWidth: window.innerWidth
     });
   }
   render() {
     return (
       <div>
-            <NavBarComponent />
-            <SideMenuComponent/>
-            <FormComponent/>
+        <NavBarComponent />
+        <SideMenuComponent />
+        <FormComponent isFormComponentVisible={this.state.isFormComponentVisible} />
       </div>
     );
   }
