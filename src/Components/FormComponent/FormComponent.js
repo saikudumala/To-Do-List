@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component, props } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignupComponent from "../FormComponent/SignupComponent";
@@ -8,7 +9,7 @@ class FormComponent extends React.Component {
     this.state = {
       userName: null,
       passWord: null,
-      formComponentVisiblity: true
+      formComponentVisiblity: true,
     };
     this.submitDetails = this.submitDetails.bind(this);
     this.signUpSubmisiion = this.signUpSubmisiion.bind(this);
@@ -18,10 +19,15 @@ class FormComponent extends React.Component {
    * Method to handle Login submission
    * @param {any} e
    */
-  submitDetails() {}
+  async submitDetails() {
+    const userObject = {userName:this.state.userName, passWord: this.state.passWord};
+    const response = await axios.post("http://localhost:8080/login", userObject);
+    console.log(response);
+  }
 
   signUpSubmisiion() {
     this.setState({ formComponentVisiblity: false });
+    
   }
 
   render() {
@@ -32,16 +38,19 @@ class FormComponent extends React.Component {
         id="formComp"
         style={{
           "border-radius": "5px",
-          "background-color": "#4DA8DA",
+          "background-color": this.state.formComponentVisiblity? "#4DA8DA" : "white",
           "margin-top": "100px",
           "text-align": "center",
           width: "500px",
           padding: "20px",
           "margin-left": "33%",
-          display: this.state.formComponentVisiblity ? "block" : "None"
+          
         }}
       >
-       {/* <form id="form_login">*/}
+        <div
+        style = {{display: this.state.formComponentVisiblity ? "block" : "None"}}
+        >
+          {/* <form id="form_login">*/}
           <p>
             <b>UserName:</b>&nbsp;
             <input
@@ -53,13 +62,14 @@ class FormComponent extends React.Component {
                 "border-radius": "4px",
                 " box-sizing": "border-box",
                 height: "30px",
-                width: "300px"
+                width: "300px",
               }}
-              onChange={e => this.setState({ userName: e.target.value })}
+              onChange={(e) => this.setState({ userName: e.target.value })}
             />
           </p>
           <p>
-            <b>Password:</b> &nbsp;<input
+            <b>Password:</b> &nbsp;
+            <input
               type="password"
               id="password"
               placeholder="Please Enter Password"
@@ -68,9 +78,9 @@ class FormComponent extends React.Component {
                 "border-radius": "4px",
                 " box-sizing": "border-box",
                 height: "30px",
-                width: "300px"
+                width: "300px",
               }}
-              onChange={e => this.setState({ passWord: e.target.value })}
+              onChange={(e) => this.setState({ passWord: e.target.value })}
             />
           </p>
 
@@ -86,28 +96,29 @@ class FormComponent extends React.Component {
                 width: "100px",
                 "background-color": "black",
                 color: "white",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               onClick={this.submitDetails}
             >
               Login
             </button>
-            </p>
+          </p>
+        </div>
+        <div>
+          <Router>
+            <Link to="/SignUp">
+              <p onClick={this.signUpSubmisiion}
+              style={{
+                display:this.state.formComponentVisiblity ? "block" : "None"
+              }}>
+                {" "}
+                Not a Registered user ? Please sign up here
+              </p>
+            </Link>
 
-
-
-          <div>
-            <Router>
-              <Link to="/SignUp">
-                <p onClick={this.signUpSubmisiion}>
-                  {" "}
-                  Not a Registered user ? Please sign up here
-                </p>
-              </Link>
-
-              <Route path="/SignUp" component={SignupComponent} />
-            </Router>
-          </div>
+            <Route path="/SignUp" component={SignupComponent} />
+          </Router>
+        </div>
         {/*</form>*/}
       </div>
     );

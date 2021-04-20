@@ -17,6 +17,7 @@ class SignupComponent extends React.Component {
     submitDetails() { }
     render() {
         console.log('signup form');
+        console.log(this.props.datafromForm);
     return (
       <div
         id="signupformComp"
@@ -27,7 +28,7 @@ class SignupComponent extends React.Component {
           "text-align": "center",
           width: "500px",
           padding: "20px",
-          "margin-left": "33%"
+          "margin-left": "33%",
         }}
       >
         {/*<form id="signup_form_login">*/}

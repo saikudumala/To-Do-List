@@ -1,5 +1,4 @@
 import React, { props } from "react";
-import LoginComponent from "../FormComponent/LoginComponent";
 import SignupComponent from "../FormComponent/SignupComponent";
 import FormComponent from "../FormComponent/FormComponent";
 import Navbar from "../NavBar/Navbar";
